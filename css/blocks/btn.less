@@ -1,0 +1,46 @@
+.btn {
+  padding: 10px 30px;
+  background-color: @backgroundColor;
+  color: @headerColor;
+  border: 3px solid @headerColor;
+  cursor: pointer;
+  margin-top: 8px;
+  text-transform: uppercase;
+
+  &:hover {
+    border: 3px solid @navColorHover;
+    color: @navColorHover;
+    transition: .3s linear;
+  }
+
+  &__contact {
+    display: flex;
+    justify-content: center;
+    border: none;
+
+    &:hover {
+      border: @headerColor;
+    }
+
+
+    @media(max-width: @mediaPhone) {
+      max-width: 100px;
+    }
+  }
+
+  &__whoIs {
+    background-color: inherit;
+    padding: 10px;
+    filter: invert();
+    border: 3px solid @black;
+    margin-right: 15px;
+
+    &:hover {
+      filter: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

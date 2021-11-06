@@ -1,0 +1,56 @@
+.whoIs {
+  //height: 430px;
+  background-image: url("@{img}--bg-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+
+  padding-bottom: 40px;
+
+  @media(max-width: @mediaIpod) {
+    padding-left: 20px;
+  }
+}
+
+.mask {
+  background-color: @black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+
+  &__contact {
+    background-color: @introColor;
+  }
+}
+
+.whoIs__main {
+  display: flex;
+  position: relative;
+  z-index: 101;
+  flex-wrap: wrap;
+}
+
+.whoIs__part {
+  width: 46%;
+  margin-right: 75px;
+
+  @media(max-width: @mediaPhone) {
+    width: 100%;
+    margin: 0;
+  }
+
+  &:last-child {
+    //padding-top: 119px;
+    margin-right: 0;
+  }
+}
+
+.img {
+  width: 30px;
+  height: 30px;
+}

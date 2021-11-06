@@ -1,0 +1,70 @@
+.contact {
+  background-image: url("@{img}Layer-1.jpg");
+  background-size: cover;
+  position: relative;
+
+  padding-bottom: 40px;
+
+
+
+  @media(max-width: @mediaIpod) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.contact__main {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+
+.contact__part {
+  display: block;
+  width: 43%;
+  margin-right: 75px;
+
+  @media(max-width: @mediaPhone) {
+    width: 100%;
+    margin: 0;
+    :first-child {
+      margin-top: 30px;
+    }
+  }
+}
+
+input {
+  padding: 15px 30px;
+  width: 80%;
+  background-color: inherit;
+  border: 2px solid @white;
+  position: relative;
+  z-index: 1000;
+}
+
+.input__message {
+  width: 100%;
+  height: 250px
+}
+
+.contact__text {
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1000;
+}
+
+.btn__contact {
+  position: relative;
+  z-index: 1000;
+  padding: 10px 100px;
+  color: @white;
+  background-color: @navColorHover;
+  margin-top: 30px;
+  //border: 3px solid transparent;
+
+  &:hover {
+    color: @introColor;
+    background-color: darken(@navColorHover, 10%);
+  }
+}

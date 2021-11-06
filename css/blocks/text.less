@@ -1,0 +1,35 @@
+.text {
+  padding-top: 40px;
+  color: @white;
+  line-height: 1.9;
+
+  &:last-child {
+    padding-top: 35px;
+  }
+
+  @media(max-width: @mediaPhone) {
+    :last-child {
+      padding-top: 0;
+    }
+  }
+
+  &__twitter {
+    font-size: 28px;
+  }
+
+  & span {
+    font-weight: 700;
+  }
+
+  &__testimonials {
+    font-size: 28px;
+    color: @introColor;
+    padding: 0;
+  }
+
+  &__contact {
+    line-height: 1.6;
+    //padding-top: 60px;
+    padding: 0;
+  }
+}

@@ -1,0 +1,53 @@
+.intro {
+  background-image: url("@{img}--photo.jpg");
+  background-size: cover;
+  height: 800px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.intro__header {
+  background-color: @headerColor;
+  width: 100%;
+  height: 150px;
+  opacity: 0.8;
+
+  @media(max-width: @mediaPhone) {
+    height: 100px;
+  }
+}
+
+.intro__mask {
+  background-color: @introColor;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.intro__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 650px;
+  position: relative;
+  z-index: 100;
+  color: white;
+  max-width: 1170px;
+  margin: 0 auto;
+  font-size: 42px;
+  text-transform: uppercase;
+  font-weight: 300;
+
+  @media (max-width: 800px) {
+    font-size: 32px;
+  }
+}
+

@@ -1,0 +1,76 @@
+.services {
+  background-color: @servicesColor;
+  //height: 405px;
+  width: 100%;
+  padding: 0;
+
+  @media(max-width: @mediaIpod) {
+    padding-left: 20px;
+  }
+}
+
+.services__main {
+  //width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media(max-width: @mediaPhone) {
+    justify-content: center;
+  }
+}
+
+.services__part {
+  width: 24%;
+  //height: 100%;
+  padding-top: 40px;
+  margin-right: 15px;
+  padding-bottom: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media(max-width: @mediaIpod) {
+      width: 48%;
+  }
+
+  @media(max-width: @mediaPhone) {
+    width: 90%;
+  }
+}
+
+
+
+
+
+.column__title {
+  margin-top: 24px;
+  text-transform: uppercase;
+  color: @white;
+  font-weight: 700;
+
+  @media(max-width: @mediaPhone) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.column__description {
+  margin-top: 20px;
+  color: @white;
+  line-height: 1.5;
+
+  @media(max-width: @mediaPhone) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.column__icon {
+  @media(max-width: @mediaPhone) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}

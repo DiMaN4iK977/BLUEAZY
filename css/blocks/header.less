@@ -1,0 +1,179 @@
+header {
+  height: 800px;
+}
+
+.header__inner {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media(max-width: @mediaPhone) {
+    height: 100px;
+  }
+}
+
+nav {
+  display: flex;
+  font-weight: 700;
+}
+
+#nav {
+  @media (max-width: @mediaPhone) {
+    display: none;
+
+    position: absolute;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    width: 100%;
+    text-align: right;
+    background-color: @introColor;
+
+    &.show {
+      display: flex;
+    }
+  }
+
+}
+
+
+#nav_2 {
+  @media (max-width: @mediaPhone) {
+    display: none;
+
+    position: absolute;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    width: 100%;
+    text-align: right;
+    background-color: darken(@white, 10%);
+
+
+    &.show {
+      display: flex;
+      z-index: 1000;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media(max-width: @mediaIpod) {
+    padding-left: 20px;
+  }
+}
+
+.nav__link {
+  text-transform: uppercase;
+  cursor: pointer;
+  color: @navColor;
+  padding: 10px 20px;
+  margin-left: 50px;
+  //position: absolute;
+  transition: .1s linear;
+  border: 3px solid transparent;
+
+  &-first-child {
+    margin-left: 0;
+  }
+
+  &__portfolio {
+    color: @black;
+  }
+
+  &:hover {
+    color: @navColorHover;
+    border: 3px solid @navColorHover;
+    //font-size: 12px;
+  }
+
+  @media (max-width: @mediaPhone) {
+    padding: 9px 15px;
+    border: none;
+
+    &:hover {
+      border: none;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  padding: 9px 2px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  @media (max-width: @mediaPhone) {
+    display: block;
+    margin-right: 20px;
+  }
+}
+
+.burger__item {
+  display: block;
+  width: 30px;
+  height: 3px;
+
+  background-color: #ffffff;
+
+  font-size: 0;
+  color: transparent;
+
+  position: relative;
+
+  &:before, &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+
+    background-color: #ffffff;
+  }
+
+  &:before {
+    top: -8px;
+  }
+
+  &:after {
+    bottom: -8px;
+  }
+
+  &__portfolio {
+    background-color: @black;
+
+    &:before, &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      left: 0;
+      z-index: 1;
+
+      background-color: @black;
+    }
+
+    &:before {
+      top: -8px;
+    }
+
+    &:after {
+      bottom: -8px;
+    }
+  }
+}
+
